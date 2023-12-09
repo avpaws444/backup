@@ -1,0 +1,12 @@
+---
+- name: Installing_tomcat
+  hosts: ashok2
+  become: yes
+  tasks:
+  - name: Get updated files from git repository
+    git:
+      rep: "https://{{ avpaws4441 | urlencode }}:{{ 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 | urlencode }}@https://github.com/avpaws4441/tomct.git"
+      dest: /home/ubuntu
+  - name: shellcommand
+    shell: sh git clone https://github.com/avpaws4441/tomct.git 
+
